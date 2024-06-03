@@ -269,6 +269,7 @@ class __PageItemState extends State<_PageItem> {
           widget.onTap(widget.page);
         },
         child: _ItemContainer(
+          backgroundColor: widget.isChecked ? highlightColor : backgroundColor,
           child: Text(
             widget.page.toString(),
             style: TextStyle(
@@ -276,7 +277,6 @@ class __PageItemState extends State<_PageItem> {
                 fontWeight: FontWeight.w600,
                 fontSize: 14),
           ),
-          backgroundColor: widget.isChecked ? highlightColor : backgroundColor,
         ));
   }
 }
